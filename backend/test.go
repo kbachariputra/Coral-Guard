@@ -17,9 +17,9 @@ import (
 )
 
 func main() {
-if err := godotenv.Load(); err != nil{
-	log.Printf("Warning: could not load .env: %v", err)
-}
+	if err := godotenv.Load(); err != nil {
+		log.Printf("Warning: could not load .env: %v", err)
+	}
 
 	uri := os.Getenv("MONGODB_URI")
 	docs := "www.mongodb.com/docs/drivers/go/current/"
